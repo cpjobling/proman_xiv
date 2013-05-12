@@ -16,7 +16,7 @@ class RegistrationsController < Devise::RegistrationsController
       end
     else
       clean_up_passwords :resource
-      render :location => :new, :layout => !request.xhr?
+      render :action => :new, :layout => !request.xhr?
     end
   end
 
